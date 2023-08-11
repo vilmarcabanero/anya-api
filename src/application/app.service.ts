@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common'
-import { HealthcheckResponseDto } from 'src/api/dtos/healthcheckResponseDto'
+import { HealthcheckResponseDto } from '@/api/dtos/healthcheckResponseDto'
 
 @Injectable()
 export class AppService {
-  getHello() {
+  healthcheck() {
     return new HealthcheckResponseDto('Anya API is up and running!')
   }
 }
