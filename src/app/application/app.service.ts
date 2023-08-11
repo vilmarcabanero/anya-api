@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common'
-import { HealthcheckResponseDto } from '@/api/dtos/healthcheckResponseDto'
+import { HealthcheckResponseDto } from '@/app/api/dtos/healthcheckResponseDto'
 
 @Injectable()
 export class AppService {

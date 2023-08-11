@@ -1,21 +1,19 @@
+import { AppService } from '@/app/application/app.service'
 import { Test, TestingModule } from '@nestjs/testing'
-import { AppController } from '@/api/controllers/app.controller'
-import { AppService } from '@/application/app.service'
 
-describe('AppController', () => {
-  let controller: AppController
+describe('AppService', () => {
+  let service: AppService
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      controllers: [AppController],
       providers: [AppService],
     }).compile()
 
-    controller = module.get<AppController>(AppController)
+    service = module.get<AppService>(AppService)
   })
 
   it('should return an object with a message indicating the API is up and running', () => {
-    expect(controller.healthcheck()).toEqual({
+    expect(service.healthcheck()).toEqual({
       message: 'Anya API is up and running!',
     })
   })
